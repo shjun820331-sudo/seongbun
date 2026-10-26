@@ -63,7 +63,7 @@ export async function searchProducts(
   );
 }
 
-/** 홈 상단 "이번 주 검증 핫딜" 섹션 — verified && onSale 상품만 대상. */
+/** 홈 상단 "지금 할인중인 검증 상품" 섹션 — verified && onSale 상품만 대상. */
 export async function getHotDeals(limit = 5): Promise<Product[]> {
   const all = await getEffectiveProducts();
   return sortProducts(all.filter((p) => p.verified && p.onSale)).slice(

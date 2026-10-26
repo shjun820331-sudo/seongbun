@@ -93,6 +93,11 @@ export default async function ProductDetailPage(
           >
             {MARKET_LABEL[product.marketSource]}에서 구매하기
           </a>
+          <p className="-mt-2 text-center text-xs text-muted">
+            {product.marketSource === "coupang"
+              ? "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+              : "이 링크는 토스쇼핑 제휴 링크로, 구매 시 일정액의 수수료를 제공받을 수 있습니다."}
+          </p>
         </div>
       </div>
 
